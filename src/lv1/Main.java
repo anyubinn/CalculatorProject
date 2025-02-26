@@ -3,7 +3,7 @@ package lv1;
 public class Main {
 
     public static void main(String[] args) {
-        CaculatorLv1 cal = new CaculatorLv1();
+        CalculatorLv1 cal = new CalculatorLv1();
         cal.startCalculate();
     }
 }

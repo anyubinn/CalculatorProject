@@ -2,7 +2,7 @@ package lv1;
 
 import java.util.Scanner;
 
-public class CaculatorLv1 {
+public class CalculatorLv1 {
 
     private int num1;
     private int num2;

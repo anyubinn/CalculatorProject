@@ -1,5 +1,6 @@
 package lv1;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,19 +14,31 @@ public class CalculatorLv1 {
     private Scanner sc = new Scanner(System.in);
 
     public void startCalculate() {
-        inputNumber();
-        inputOperator();
-        calculateResult();
-        System.out.println("result = " + result);
+        String input = "";
+        while (!input.equals("exit")){
+            inputNumber();
+            inputOperator();
+            calculateResult();
+            System.out.println("result = " + result);
+
+            System.out.print("계속하려면 아무 키나 입력하고 종료하려면 'exit' 키를 입력하세요: ");
+            input = sc.next();
+        }
     }
 
     // 양의 정수 2개를 입력받는 메서드
     private void inputNumber() {
-        System.out.print("양의 정수 두 개를 입력하세요 (0부터 입력 가능): ");
-        num1 = sc.nextInt();
-        num2 = sc.nextInt();
-        if (num1 < 0 || num2 < 0) {
-            System.out.println("양의 정수만 입력이 가능합니다. 다시 입력해주세요.");
+        try {
+            System.out.print("양의 정수 두 개를 입력하세요 (0부터 입력 가능): ");
+            num1 = sc.nextInt();
+            num2 = sc.nextInt();
+            if (num1 < 0 || num2 < 0) {
+                System.out.println("양의 정수만 입력이 가능합니다. 다시 입력해주세요.");
+                inputNumber();
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("다른 문자를 입력했습니다. 올바른 숫자를 입력해주세요.");
+            sc.nextLine(); // 무한루프 방지
             inputNumber();
         }
     }
@@ -62,6 +75,7 @@ public class CalculatorLv1 {
             }
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
+            result = -999;
         }
         return result;
     }

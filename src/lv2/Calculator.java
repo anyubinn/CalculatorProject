@@ -32,11 +32,18 @@ public class Calculator {
             return null;
         }
         addResult(num1, num2, operator, result);
+        removeOldOneResults();
         return result;
     }
 
     public List<String> getResults() {
         return results;
+    }
+
+    private void removeOldOneResults() {
+        if (results.size() > 3) {
+            results.remove(0);
+        }
     }
 
     private void addResult(int num1, int num2, char operator, Integer result) {

@@ -10,7 +10,7 @@ public class Calculator {
         this.results = new ArrayList<>();
     }
 
-    public Integer calculator(int num1, int num2, char operator) {
+    public Integer calculate(int num1, int num2, char operator) {
         int result = 0;
         try {
             switch (operator) {

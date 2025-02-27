@@ -18,7 +18,7 @@ public class Main {
             char operator = CalculatorInput.inputOperator();
             CalculatorOutput.printDivider();
 
-            Integer result = cal.calculator(num1, num2, operator);
+            Integer result = cal.calculate(num1, num2, operator);
             CalculatorOutput.printOneResult(num1, num2, operator, result);
             CalculatorOutput.printDivider();
 

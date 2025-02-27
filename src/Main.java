@@ -1,3 +1,4 @@
+import java.util.List;
 import lv2.Calculator;
 import lv2.io.CalculatorInput;
 import lv2.io.CalculatorOutput;
@@ -19,6 +20,10 @@ public class Main {
 
             Integer result = cal.calculator(num1, num2, operator);
             CalculatorOutput.printOneResult(num1, num2, operator, result);
+            CalculatorOutput.printDivider();
+
+            List<String> results = cal.getResults();
+            CalculatorOutput.printAllResults(results);
 
             CalculatorOutput.printDivider();
             CalculatorOutput.printDivider();

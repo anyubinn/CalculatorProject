@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-    private List<Integer> results;
+    private List<String> results;
 
     public Calculator() {
         this.results = new ArrayList<>();
@@ -31,15 +31,15 @@ public class Calculator {
             System.out.println("0으로 나눌 수 없습니다.");
             return null;
         }
-        addResult(result);
+        addResult(num1, num2, operator, result);
         return result;
     }
 
-    public List<Integer> getResults() {
+    public List<String> getResults() {
         return results;
     }
 
-    private void addResult(int result) {
-        results.add(result);
+    private void addResult(int num1, int num2, char operator, Integer result) {
+        results.add(num1 + " " + operator + " " + num2 + " = " + result);
     }
 }

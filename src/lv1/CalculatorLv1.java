@@ -56,5 +56,6 @@ public class CalculatorLv1 {
             System.out.print("계속하려면 아무 키나 입력하고 종료하려면 'exit' 키를 입력하세요: ");
             input = sc.next();
         }
+        sc.close();
     }
 }

@@ -10,7 +10,7 @@ public class Calculator {
         this.results = new ArrayList<>();
     }
 
-    public int calculator(int num1, int num2, char operator) {
+    public Integer calculator(int num1, int num2, char operator) {
         int result = 0;
         try {
             switch (operator) {
@@ -26,11 +26,10 @@ public class Calculator {
                 case '/':
                     result = num1 / num2;
                     break;
-                default:
-                    System.out.println("잘못된 사칙연산 기호입니다.");
             }
         } catch (ArithmeticException e) {
             System.out.println("0으로 나눌 수 없습니다.");
+            return null;
         }
         addResult(result);
         return result;

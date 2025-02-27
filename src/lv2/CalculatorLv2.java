@@ -1,10 +1,10 @@
-package lv1;
+package lv2;
 
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class CalculatorLv1 {
+public class CalculatorLv2 {
 
     private int num1;
     private int num2;

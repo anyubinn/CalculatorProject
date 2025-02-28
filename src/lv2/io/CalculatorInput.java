@@ -1,6 +1,5 @@
 package lv2.io;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
 

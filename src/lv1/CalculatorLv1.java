@@ -27,21 +27,26 @@ public class CalculatorLv1 {
                 System.out.println("다른 문자를 입력했습니다.");
                 return;
             }
+            sc.nextLine();
             System.out.print("사칙연산 기호를 입력하세요: ");
-            char operator = sc.next().charAt(0);
+            String operator = sc.nextLine().trim();
+            if (operator.length() != 1) {
+                System.out.println("사칙연산 기호는 1글자만 가능합니다.");
+                return;
+            }
             int result = 0;
             try {
                 switch (operator) {
-                    case '+':
+                    case "+":
                         result = num1 + num2;
                         break;
-                    case '-':
+                    case "-":
                         result = num1 - num2;
                         break;
-                    case '*':
+                    case "*":
                         result = num1 * num2;
                         break;
-                    case '/':
+                    case "/":
                         result = num1 / num2;
                         break;
                     default:

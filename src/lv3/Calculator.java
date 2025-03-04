@@ -1,6 +1,6 @@
 package lv3;
 
 @FunctionalInterface
-public interface Calculator {
-    int calculate(int num1, int num2);
+public interface Calculator <T extends Number> {
+    T calculate(T num1, T num2);
 }

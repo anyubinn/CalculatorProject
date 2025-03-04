@@ -1,18 +1,18 @@
 package lv3;
 
 public enum OperatorType {
-    PLUS('+'),
-    MINUS('-'),
-    MULTIPLY('*'),
-    DIVIDE('/');
+    PLUS((a, b) -> a.doubleValue() + b.doubleValue()),
+    MINUS((a, b) -> a.doubleValue() - b.doubleValue()),
+    MULTIPLY((a, b) -> a.doubleValue() * b.doubleValue()),
+    DIVIDE((a, b) -> a.doubleValue() / b.doubleValue());
 
-    private final char operator;
+    private final Calculator calculator;
 
-    OperatorType(char operator) {
-        this.operator = operator;
+    OperatorType(Calculator calculator) {
+        this.calculator = calculator;
     }
 
-    public char getOperator() {
-        return operator;
+    public <T extends Number> double calculate(T num1, T num2) {
+        return (double) calculator.calculate(num1, num2);
     }
 }

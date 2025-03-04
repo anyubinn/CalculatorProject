@@ -2,6 +2,7 @@ package lv3.io;
 
 import java.util.Scanner;
 import java.util.Set;
+import lv3.OperatorType;
 
 public class CalculatorInput {
     static Scanner sc = new Scanner(System.in);
@@ -10,7 +11,7 @@ public class CalculatorInput {
     public static Number inputNumber() {
         while (true) {
             try {
-                System.out.print("양의 정수를 입력하세요(0부터 가능): ");
+                System.out.print("양수를 입력하세요(0부터 가능): ");
                 String numStr = sc.nextLine().trim();
                 if (numStr.isEmpty()) {
                     System.out.println("숫자를 입력해주세요.");
@@ -29,15 +30,22 @@ public class CalculatorInput {
         }
     }
 
-    public static char inputOperator() {
+    public static OperatorType inputOperator() {
         while (true) {
             System.out.print("사칙연산 기호를 입력하세요(+, -, *, / 가능): ");
             String operator = sc.nextLine();
-            if (operator.length() != 1 || !operators.contains(operator)) {
-                System.out.println("잘못된 사칙연산 기호입니다. 다시 입력해주세요.");
-                continue;
+            switch (operator) {
+                case "+":
+                    return OperatorType.PLUS;
+                case "-":
+                    return OperatorType.MINUS;
+                case "*":
+                    return OperatorType.MULTIPLY;
+                case "/":
+                    return OperatorType.DIVIDE;
+                default:
+                    System.out.println("잘못된 사칙연산 기호입니다. 다시 입력해주세요.");
             }
-            return operator.charAt(0);
         }
     }
 

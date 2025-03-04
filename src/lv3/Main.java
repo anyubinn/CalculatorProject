@@ -9,7 +9,7 @@ public class Main {
         ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator();
         Number num1 = CalculatorInput.inputNumber();
         Number num2 = CalculatorInput.inputNumber();
-        char operator = CalculatorInput.inputOperator();
+        OperatorType operator = CalculatorInput.inputOperator();
         Number result = arithmeticCalculator.calculate(num1, num2, operator);
         System.out.println(result);
     }

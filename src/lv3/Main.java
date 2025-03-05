@@ -33,6 +33,9 @@ public class Main {
             CalculatorOutput.printAllResults(results);
             CalculatorOutput.printDivider();
 
+            List<Double> biggerResults = arithmeticCalculator.getBiggerResults(num1, num2);
+            CalculatorOutput.printBiggerResults(biggerResults);
+
             input = CalculatorInput.inputAgain();
         }
     }

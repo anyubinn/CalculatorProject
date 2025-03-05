@@ -21,4 +21,11 @@ public class CalculatorOutput {
             System.out.println(result);
         }
     }
+
+    public static void printBiggerResults(List<Double> results) {
+        System.out.println("입력된 값 보다 큰 누적 결과: ");
+        for (double result : results) {
+            System.out.println(result);
+        }
+    }
 }

@@ -2,6 +2,7 @@ package lv3;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ArithmeticCalculator {
 
@@ -26,5 +27,11 @@ public class ArithmeticCalculator {
         if (results.size() > 3) {
             results.remove(0);
         }
+    }
+
+    public <T extends Number> List<Double> getBiggerResults(T num1, T num2) {
+        return results.stream()
+                .filter(results -> results.compareTo((Double) num1) > 0 || results.compareTo((Double) num2) >0)
+                .collect(Collectors.toList());
     }
 }

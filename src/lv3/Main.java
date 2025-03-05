@@ -10,7 +10,12 @@ public class Main {
         Number num1 = CalculatorInput.inputNumber();
         Number num2 = CalculatorInput.inputNumber();
         OperatorType operator = CalculatorInput.inputOperator();
-        Number result = arithmeticCalculator.calculate(num1, num2, operator);
+        Number result = null;
+        try {
+            result = arithmeticCalculator.calculate(num1, num2, operator);
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println(result);
     }
 }

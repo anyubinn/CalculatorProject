@@ -1,12 +1,10 @@
 package lv3.io;
 
 import java.util.Scanner;
-import java.util.Set;
 import lv3.OperatorType;
 
 public class CalculatorInput {
     static Scanner sc = new Scanner(System.in);
-    static Set<String> operators = Set.of("+", "-", "*", "/");
 
     public static Number inputNumber() {
         while (true) {

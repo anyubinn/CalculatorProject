@@ -1,5 +1,6 @@
 package lv3;
 
+import java.util.List;
 import lv3.io.CalculatorInput;
 import lv3.io.CalculatorOutput;
 
@@ -26,6 +27,10 @@ public class Main {
                 System.out.println(e.getMessage());
             }
             CalculatorOutput.printOneResult(num1, num2, operator, result);
+            CalculatorOutput.printDivider();
+
+            List<Double> results = arithmeticCalculator.getResults();
+            CalculatorOutput.printAllResults(results);
             CalculatorOutput.printDivider();
 
             input = CalculatorInput.inputAgain();

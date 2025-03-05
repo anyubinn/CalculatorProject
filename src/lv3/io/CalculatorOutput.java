@@ -1,7 +1,7 @@
 package lv3.io;
 
 import java.util.List;
-import lv3.OperatorType;
+import lv3.arithmetic.OperatorType;
 
 public class CalculatorOutput {
 

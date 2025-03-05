@@ -1,4 +1,4 @@
-package lv3;
+package lv3.arithmetic;
 
 import java.util.ArrayList;
 import java.util.List;

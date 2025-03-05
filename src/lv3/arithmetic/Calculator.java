@@ -1,4 +1,4 @@
-package lv3;
+package lv3.arithmetic;
 
 @FunctionalInterface
 public interface Calculator <T extends Number> {

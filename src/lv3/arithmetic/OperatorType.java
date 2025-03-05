@@ -1,4 +1,4 @@
-package lv3;
+package lv3.arithmetic;
 
 public enum OperatorType {
     PLUS((a, b) -> a.doubleValue() + b.doubleValue()),

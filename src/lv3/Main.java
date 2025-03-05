@@ -1,6 +1,8 @@
 package lv3;
 
 import java.util.List;
+import lv3.arithmetic.ArithmeticCalculator;
+import lv3.arithmetic.OperatorType;
 import lv3.io.CalculatorInput;
 import lv3.io.CalculatorOutput;
 
